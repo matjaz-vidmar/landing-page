@@ -41,7 +41,7 @@ const bigBlackButtonStyles = css`
   background: black;
   color: white;
   border-radius: 6px;
-  width: 400px;
+  width: 350px;
   height: 40px;
   padding: 8px 20px;
   text-align: center;
@@ -151,6 +151,72 @@ const divAbovePic = css`
   padding: 20px;
   justify-content: space-between;
 `;
+
+const stickyBottom = css`
+  background: black;
+
+  border-radius: 12px;
+  width: 800px;
+  height: 30px;
+  padding: 15px 25px;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  align-content: center;
+  margin: auto;
+  background: linear-gradient(
+    to right,
+    #ef5350,
+    #f48fb1,
+    #7e57c2,
+    #2196f3,
+    #26c6da,
+    #43a047,
+    #eeff41,
+    #f9a825,
+    #ff5722
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  :hover {
+    background-color: #404040;
+  }
+`;
+
+const blackButtonStylesSticky = css`
+  background: #282828;
+  color: white;
+  border-radius: 30px;
+  width: 150px;
+  padding: 8px 20px;
+
+  :hover {
+    background-color: #404040;
+  }
+`;
+
+const divBlackBackground = css`
+  background: black;
+  border-radius: 12px;
+  width: 800px;
+  height: 30px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+  position: sticky;
+  bottom: 0;
+`;
+
+const smallWhiteText = css`
+  color: white;
+  width: fit-content;
+  padding: 30px 10px;
+`;
+
 function App() {
   return (
     <div css={mainStyles}>
@@ -230,6 +296,13 @@ function App() {
         </div>
         <img alt="big long pic" src={bigLongPhoto} />
       </body>
+      <div css={divBlackBackground}>
+        <span css={stickyBottom}>
+          Premium Components for Tailwind & Webflow.{' '}
+        </span>
+        <p css={smallWhiteText}> Instantly Copied.</p>{' '}
+        <button css={blackButtonStylesSticky}>Browse collection</button>
+      </div>
     </div>
   );
 }
