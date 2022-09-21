@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import './style.css';
 import { css } from '@emotion/react';
 import bigLongPhoto from './images/bigLongPhoto.png';
 import colors from './images/colors.png';
